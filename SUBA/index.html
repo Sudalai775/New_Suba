@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Shuba Associates - International Freight Forwarders & Logistics</title>
+    <meta name="description" content="Leading international freight forwarders providing ocean freight, air freight, customs clearance and logistics consultancy services since 2010. Expert logistics solutions across India." />
+    <meta name="author" content="Shree Shuba Associates" />
+    <meta name="keywords" content="freight forwarding, logistics, ocean freight, air freight, customs clearance, international shipping, export import, Chennai, India" />
+    
+    <meta property="og:title" content="Shree Shuba Associates - International Freight Forwarders & Logistics" />
+    <meta property="og:description" content="Leading international freight forwarders providing comprehensive logistics solutions. Ocean freight, air freight, customs clearance and trade consultancy services." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@shreeshubassoc" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: 'hsl(210 40% 98%)',
+                        foreground: 'hsl(222.2 84% 4.9%)',
+                        card: 'hsl(0 0% 100%)',
+                        'card-foreground': 'hsl(222.2 84% 4.9%)',
+                        popover: 'hsl(0 0% 100%)',
+                        'popover-foreground': 'hsl(222.2 84% 4.9%)',
+                        primary: 'hsl(221.2 83.2% 53.3%)',
+                        'primary-foreground': 'hsl(210 40% 98%)',
+                        secondary: 'hsl(210 40% 96%)',
+                        'secondary-foreground': 'hsl(222.2 84% 4.9%)',
+                        muted: 'hsl(210 40% 96%)',
+                        'muted-foreground': 'hsl(215.4 16.3% 46.9%)',
+                        accent: 'hsl(210 40% 96%)',
+                        'accent-foreground': 'hsl(222.2 84% 4.9%)',
+                        destructive: 'hsl(0 84.2% 60.2%)',
+                        'destructive-foreground': 'hsl(210 40% 98%)',
+                        border: 'hsl(214.3 31.8% 91.4%)',
+                        input: 'hsl(214.3 31.8% 91.4%)',
+                        ring: 'hsl(221.2 83.2% 53.3%)'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, hsl(221, 75%, 45%) 0%, hsl(262.1 83.3% 57.8%) 100%);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .mobile-menu.open {
+            max-height: 300px;
+        }
+        
+        /* Fallback for mobile devices */
+        @media (max-width: 768px) {
+            .video-background {
+                display: none;
+            }
+            
+            .hero-container {
+                background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1519791883288-dc8bd696e667?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
+            }
+        }
+
+        .logistic-animation-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+        .globe {
+            font-size: 150px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotateGlobe 20s linear infinite;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+        .globe::before {
+            content: "🌍";
+        }
+        .airplane, .train, .truck, .ship {
+            position: absolute;
+            font-size: 24px;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+        }
+        .airplane::before { content: "✈️"; }
+        .train::before { content: "🚂"; }
+        .truck::before { content: "🚚"; }
+        .ship::before { content: "🚢"; }
+        @keyframes rotateGlobe {
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-background text-foreground">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-primary/95 backdrop-blur-sm shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-primary-foreground text-xl font-bold flex items-center gap-2">
+                        <video src="boat.mp4" width="40" height="40" autoplay muted loop playsinline style="border-radius: 6px; object-fit: cover;"></video>
+                        Shree Shuba Associates
+                    </h1>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-primary-foreground hover:text-white">Home</a>
+                    <a href="#about" class="nav-link text-primary-foreground hover:text-white">About</a>
+                    <a href="#services" class="nav-link text-primary-foreground hover:text-white">Services</a>
+                    <a href="#team" class="nav-link text-primary-foreground hover:text-white">Team</a>
+                    <a href="#contact" class="nav-link text-primary-foreground hover:text-white">Contact</a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-primary-foreground">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="mobile-menu md:hidden bg-primary">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" class="block px-3 py-2 text-primary-foreground hover:text-white">Home</a>
+                    <a href="#about" class="block px-3 py-2 text-primary-foreground hover:text-white">About</a>
+                    <a href="#services" class="block px-3 py-2 text-primary-foreground hover:text-white">Services</a>
+                    <a href="#team" class="block px-3 py-2 text-primary-foreground hover:text-white">Team</a>
+                    <a href="#contact" class="block px-3 py-2 text-primary-foreground hover:text-white">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section id="home" class="hero-container min-h-screen flex items-center justify-center pt-16 relative">
+        <!-- Video Background -->
+            <video class="video-background" autoplay muted loop playsinline>
+                <source src="videoplayback.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        
+        <!-- Overlay for better text visibility -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Hero content -->
+        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 fade-in">
+                Global Logistics Solutions
+            </h1>
+            <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto fade-in" style="animation-delay: 0.2s;">
+                Your trusted partner in international freight forwarding and logistics services since 2010
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in" style="animation-delay: 0.4s;">
+                <a href="#contact" class="inline-flex items-center px-8 py-3 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-colors">
+                    Get Started
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#services" class="inline-flex items-center px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-colors">
+                    Our Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rest of your content remains exactly the same -->
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">About Shree Shuba Associates</h2>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold text-foreground mb-6">Our Story</h3>
+                    <p class="text-muted-foreground mb-6 leading-relaxed">
+                        Established in 2010, Shree Shuba Associates was founded by Mr. A.C.S. Mutho, who brings over 26 years of domain knowledge in international global logistics. Our company has grown from a single office in Chennai to multiple locations across India including Tuticorin, Sricity, Krishnapatnam port, and Mumbai, with plans to expand to Pune.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-foreground mb-6">Our Mission</h3>
+                    <p class="text-muted-foreground mb-6 leading-relaxed">
+                        To provide exceptional freight forwarding and consultancy services while mentoring new exporters/importers through the complexities of global trade.
+                    </p>
+                </div>
+                <div class="relative">
+                    <div class="logistic-animation-container" style="position:relative;width:400px;height:400px;margin:auto;">
+                        <div class="globe"></div>
+                        <div class="airplane airplane-1"></div>
+                        <div class="train train-1"></div>
+                        <div class="truck truck-1"></div>
+                        <div class="ship ship-1"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+                <div class="stat-card text-white p-8 rounded-2xl text-center">
+                    <div class="text-4xl font-bold mb-2">50%</div>
+                    <div class="text-white/80">Annual Growth Rate</div>
+                </div>
+                <div class="stat-card text-white p-8 rounded-2xl text-center">
+                    <div class="text-4xl font-bold mb-2">₹6 Cr</div>
+                    <div class="text-white/80">Annual Turnover</div>
+                </div>
+                <div class="stat-card text-white p-8 rounded-2xl text-center">
+                    <div class="text-4xl font-bold mb-2">500+</div>
+                    <div class="text-white/80">Happy Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-secondary/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Services</h2>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+                <p class="text-muted-foreground mt-6 max-w-2xl mx-auto">
+                    Comprehensive logistics solutions tailored to meet your specific business needs
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-card p-8 rounded-2xl shadow-lg border border-border">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-ship text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-foreground mb-4">Ocean Freight</h3>
+                    <p class="text-muted-foreground">Full-container load (FCL) and less-than-container load (LCL) services for both imports and exports with global coverage.</p>
+                </div>
+                
+                <div class="service-card bg-card p-8 rounded-2xl shadow-lg border border-border">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-plane text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-foreground mb-4">Air Freight</h3>
+                    <p class="text-muted-foreground">Time-sensitive air freight solutions for urgent shipments with priority handling and express delivery options.</p>
+                </div>
+                
+                <div class="service-card bg-card p-8 rounded-2xl shadow-lg border border-border">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-file-contract text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-foreground mb-4">Customs Clearance</h3>
+                    <p class="text-muted-foreground">Expert customs brokerage services ensuring smooth and compliant clearance of your goods through all major ports.</p>
+                </div>
+                
+                <div class="service-card bg-card p-8 rounded-2xl shadow-lg border border-border">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-foreground mb-4">Trade Consultancy</h3>
+                    <p class="text-muted-foreground">Professional guidance on export benefit schemes, DGFT policies, and international trade regulations.</p>
+                </div>
+                
+                <div class="service-card bg-card p-8 rounded-2xl shadow-lg border border-border">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-boxes text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-foreground mb-4">Supply Chain Solutions</h3>
+                    <p class="text-muted-foreground">End-to-end logistics management and warehousing solutions for various industry verticals.</p>
+                </div>
+                
+                <div class="service-card bg-card p-8 rounded-2xl shadow-lg border border-border">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-foreground mb-4">Business Advisory</h3>
+                    <p class="text-muted-foreground">Strategic mentorship for startups and established businesses in global export/import operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Industries We Serve</h2>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-card p-6 rounded-xl shadow-lg border border-border text-center hover:shadow-xl transition-shadow">
+                    <i class="fas fa-car text-3xl text-primary mb-4"></i>
+                    <h3 class="font-semibold text-foreground">Automotive</h3>
+                </div>
+                <div class="bg-card p-6 rounded-xl shadow-lg border border-border text-center hover:shadow-xl transition-shadow">
+                    <i class="fas fa-microchip text-3xl text-primary mb-4"></i>
+                    <h3 class="font-semibold text-foreground">Electronics</h3>
+                </div>
+                <div class="bg-card p-6 rounded-xl shadow-lg border border-border text-center hover:shadow-xl transition-shadow">
+                    <i class="fas fa-tshirt text-3xl text-primary mb-4"></i>
+                    <h3 class="font-semibold text-foreground">Garments</h3>
+                </div>
+                <div class="bg-card p-6 rounded-xl shadow-lg border border-border text-center hover:shadow-xl transition-shadow">
+                    <i class="fas fa-ring text-3xl text-primary mb-4"></i>
+                    <h3 class="font-semibold text-foreground">Leather</h3>
+                </div>
+                <div class="bg-card p-6 rounded-xl shadow-lg border border-border text-center hover:shadow-xl transition-shadow">
+                    <i class="fas fa-industry text-3xl text-primary mb-4"></i>
+                    <h3 class="font-semibold text-foreground">Industrial</h3>
+                </div>
+                <div class="bg-card p-6 rounded-xl shadow-lg border border-border text-center hover:shadow-xl transition-shadow">
+                    <i class="fas fa-seedling text-3xl text-primary mb-4"></i>
+                    <h3 class="font-semibold text-foreground">Agriculture</h3>
+                </div>
+                <div class="bg-card p-6 rounded-xl shadow-lg border border-border text-center hover:shadow-xl transition-shadow">
+                    <i class="fas fa-utensils text-3xl text-primary mb-4"></i>
+                    <h3 class="font-semibold text-foreground">Food Products</h3>
+                </div>
+                <div class="bg-card p-6 rounded-xl shadow-lg border border-border text-center hover:shadow-xl transition-shadow">
+                    <i class="fas fa-fish text-3xl text-primary mb-4"></i>
+                    <h3 class="font-semibold text-foreground">Marine</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-secondary/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Leadership Team</h2>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-card rounded-2xl shadow-xl border border-border overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-foreground mb-2">Mr. A.C.S. Mutho</h3>
+                        <p class="text-primary font-medium mb-3">Founder & Managing Director</p>
+                        <p class="text-muted-foreground text-sm mb-4">
+                            BA with 26+ years of shipping industry experience. Visionary leader connecting global logistics networks.
+                        </p>
+                        <p class="text-sm text-muted-foreground">
+                            <i class="fas fa-envelope mr-2"></i>
+                            info@shreeshubassociates.com
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-card rounded-2xl shadow-xl border border-border overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-foreground mb-2">Mr. Venkat</h3>
+                        <p class="text-primary font-medium mb-3">Head of Customer Service</p>
+                        <p class="text-muted-foreground text-sm mb-4">
+                            Leading customer satisfaction initiatives and ensuring exceptional service delivery.
+                        </p>
+                        <p class="text-sm text-muted-foreground">
+                            <i class="fas fa-envelope mr-2"></i>
+                            customerservice@shreeshubassociates.com
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-card rounded-2xl shadow-xl border border-border overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-foreground mb-2">Mr. Harish</h3>
+                        <p class="text-primary font-medium mb-3">Head of DGFT Consultancy</p>
+                        <p class="text-muted-foreground text-sm mb-4">
+                            Expert in DGFT policies with extensive experience in trade regulations and compliance.
+                        </p>
+                        <p class="text-sm text-muted-foreground">
+                            <i class="fas fa-envelope mr-2"></i>
+                            dgft@shreeshubassociates.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+                <p class="text-muted-foreground mt-6 max-w-2xl mx-auto">
+                    Ready to streamline your logistics? Contact our expert team for personalized solutions.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-foreground mb-2">Your Name</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-foreground mb-2">Email Address</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-foreground mb-2">Subject</label>
+                            <input type="text" id="subject" required class="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-foreground mb-2">Message</label>
+                            <textarea id="message" rows="5" required class="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary text-primary-foreground font-semibold py-3 px-6 rounded-lg hover:bg-primary/90 transition-colors">
+                            Send Message
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="bg-card p-8 rounded-2xl shadow-lg border border-border">
+                    <h3 class="text-xl font-semibold text-foreground mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-foreground mb-1">Address</h4>
+                                <p class="text-muted-foreground text-sm">
+                                    165/82, Thambuchettystreet,<br>
+                                    2nd & 3rd Floor, Near Muthialpet Boys school,<br>
+                                    Chennai-600001
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                                <i class="fas fa-envelope text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-foreground mb-1">Email</h4>
+                                <p class="text-muted-foreground text-sm">info@shreeshubassociates.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                                <i class="fas fa-globe text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-foreground mb-1">Website</h4>
+                                <p class="text-muted-foreground text-sm">www.shreeshubassociates.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <h4 class="font-semibold text-foreground mb-4">Department Contacts</h4>
+                        <div class="space-y-2 text-sm text-muted-foreground">
+                            <p><span class="font-medium">Logistics:</span> customerservice@shreeshubassociates.com</p>
+                            <p><span class="font-medium">Enquiries:</span> enquiry@shreeshubassociates.com</p>
+                            <p><span class="font-medium">DGFT:</span> dgft@shreeshubassociates.com</p>
+                            <p><span class="font-medium">Admin:</span> admin@shreeshubassociates.com</p>
+                            <p><span class="font-medium">HR:</span> hr@shreeshubassociates.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-foreground text-background py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">Shree Shuba Associates</h3>
+                    <p class="text-background/80 mb-6 max-w-md">
+                        Your trusted partner in international freight forwarding and logistics solutions since 2010. 
+                        Global expertise delivered locally.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center text-background hover:bg-background/20 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center text-background hover:bg-background/20 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center text-background hover:bg-background/20 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center text-background hover:bg-background/20 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-background/80 hover:text-background transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-background/80 hover:text-background transition-colors">About Us</a></li>
+                        <li><a href="#services" class="text-background/80 hover:text-background transition-colors">Services</a></li>
+                        <li><a href="#team" class="text-background/80 hover:text-background transition-colors">Team</a></li>
+                        <li><a href="#contact" class="text-background/80 hover:text-background transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-background/80 hover:text-background transition-colors">Ocean Freight</a></li>
+                        <li><a href="#" class="text-background/80 hover:text-background transition-colors">Air Freight</a></li>
+                        <li><a href="#" class="text-background/80 hover:text-background transition-colors">Customs Clearance</a></li>
+                        <li><a href="#" class="text-background/80 hover:text-background transition-colors">Trade Consultancy</a></li>
+                        <li><a href="#" class="text-background/80 hover:text-background transition-colors">Supply Chain</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-background/20 pt-8 text-center">
+                <p class="text-background/60">
+                    &copy; 2023 Shree Shuba Associates. All rights reserved. | 
+                    Designed with ❤️ for logistics excellence
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('open');
+        });
+        
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.remove('open');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && subject && message) {
+                // Show success message
+                const button = e.target.querySelector('button[type="submit"]');
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check mr-2"></i>Message Sent!';
+                button.style.backgroundColor = '#10b981';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.backgroundColor = '';
+                    this.reset();
+                }, 3000);
+            }
+        });
+        
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .stat-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.logistic-animation-container .airplane, .logistic-animation-container .train, .logistic-animation-container .truck, .logistic-animation-container .ship');
+            const radius = 150;
+            const speed = 0.02;
+            elements.forEach((el, index) => {
+                const phase = (index * Math.PI * 2) / elements.length;
+                let angle = phase;
+                function animate() {
+                    const x = 200 + Math.cos(angle) * radius;
+                    const y = 200 + Math.sin(angle) * radius;
+                    el.style.left = `${x}px`;
+                    el.style.top = `${y}px`;
+                    angle += speed;
+                    requestAnimationFrame(animate);
+                }
+                animate();
+            });
+        });
+    </script>
+</body>
+</html>
